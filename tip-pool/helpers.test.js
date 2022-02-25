@@ -25,6 +25,15 @@ describe('helpers tests', function () {
     expect(calculateTipPercent(18, 3)).toEqual(17)
   })
 
+  it('should create and append a new td', function() {
+    let newTr = document.createElement('tr')
+
+    appendTd(newTr, 'test')
+
+    expect(newTr.children.length).toEqual(1)
+    expect(newTr.firstChild.textContent).toEqual('test')
+  })
+
   afterEach(function() {
     billAmtInput.value = ''
     tipAmtInput.value = ''

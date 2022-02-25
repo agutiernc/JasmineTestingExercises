@@ -5,6 +5,28 @@ describe('helpers tests', function () {
     submitPaymentInfo()
   })
 
+  it('should sum the total tip amount of all payments', function() {
+    expect(sumPaymentTotal('tipAmt')).toEqual(9)
+
+    billAmtInput.value = 30
+    tipAmtInput.value = 5
+
+    submitPaymentInfo()
+
+    expect(sumPaymentTotal('tipAmt')).toEqual(14)
+  })
+
+  it('should sum the total bill amount of all payments', function() {
+    expect(sumPaymentTotal('billAmt')).toEqual(50)
+
+    billAmtInput.value = 70
+    tipAmtInput.value = 15
+
+    submitPaymentInfo()
+
+    expect(sumPaymentTotal('billAmt')).toEqual(120)
+  })
+
   it('should sum the tip percent payment total', function() {
     expect(sumPaymentTotal('tipPercent')).toEqual(18)
 

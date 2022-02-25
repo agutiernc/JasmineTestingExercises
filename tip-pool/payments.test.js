@@ -22,6 +22,16 @@ describe('payments tests', function() {
     expect(Object.keys(allPayments).length).toEqual(0)
   })
 
+  it('should create new payment using createCurPayment', function() {
+    let newPayment = {
+      billAmt: '20',
+      tipAmt: '3',
+      tipPercent: 15
+    }
+
+    expect(createCurPayment()).toEqual(createCurPayment(newPayment));
+  })
+
   afterEach(function() {
     billAmtInput.value = ''
     tipAmtInput.value = ''

@@ -13,6 +13,15 @@ describe('payments tests', function() {
     expect(allPayments['payment1'].tipPercent).toEqual(21)
   })
 
+  it('should not add new payment if input is empty', function() {
+    billAmtInput.value = ''
+    tipAmtInput.value = ''
+
+    submitPaymentInfo()
+
+    expect(Object.keys(allPayments).length).toEqual(0)
+  })
+
   afterEach(function() {
     billAmtInput.value = ''
     tipAmtInput.value = ''

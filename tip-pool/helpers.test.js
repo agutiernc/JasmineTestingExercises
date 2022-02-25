@@ -8,6 +8,10 @@ describe('helpers tests', function () {
   it('should sum the total tip amount of all payments', function() {
     expect(sumPaymentTotal('tipAmt')).toEqual(9)
 
+    /*
+      calculates tipAmt with additional new data
+      and sums up previous answer to get answer below
+    */
     billAmtInput.value = 30
     tipAmtInput.value = 5
 
@@ -19,6 +23,10 @@ describe('helpers tests', function () {
   it('should sum the total bill amount of all payments', function() {
     expect(sumPaymentTotal('billAmt')).toEqual(50)
 
+    /*
+      calculates billAmt with additional new data
+      and sums up previous answer to get answer below
+    */
     billAmtInput.value = 70
     tipAmtInput.value = 15
 

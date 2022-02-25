@@ -22,7 +22,15 @@ describe("Servers test (with setup and tear-down)", function() {
     expect(tdList.length).toEqual(2)
     expect(tdList[0].innerText).toEqual('Alice')
     expect(tdList[1].innerText).toEqual('$0.00')
-    
+
+  })
+
+  it('should not add a new server if input is empty', function() {
+    serverNameInput.value = ''
+
+    submitServerInfo()
+
+    expect(Object.keys(allServers).length).toEqual(0)
   })
 
   afterEach(function() {

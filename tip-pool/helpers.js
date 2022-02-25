@@ -8,7 +8,7 @@ function sumPaymentTotal(type) {
 
     total += Number(payment[type]);
   }
-  
+
   return total;
 }
 
@@ -23,4 +23,24 @@ function appendTd(tr, value) {
   newTd.innerText = value;
 
   tr.append(newTd);
+}
+
+function appendDeleteBtn(tr) {
+  let newTd = document.createElement('td')
+  newTd.className = 'delete-btn'
+  newTd.textContent = 'X'
+
+  newTd.addEventListener('click', removeElement)
+
+  tr.append(newTd)
+}
+
+function removeElement(e) {
+  let el = e.target.closest('tr')
+
+  delete allServers[el.id]
+
+  el.parentNode.removeChild(el)
+
+  updateServerTable()
 }

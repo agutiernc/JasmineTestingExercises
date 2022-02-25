@@ -5,8 +5,9 @@
 <link rel="stylesheet" href="style.css" />
 
 <!-- include CSS for Jasmine -->
-<link rel="stylesheet"
-  href="https://unpkg.com/jasmine-core/lib/jasmine-core/jasmine.css" />
+<!-- <link rel="stylesheet"
+  href="https://unpkg.com/jasmine-core/lib/jasmine-core/jasmine.css" /> -->
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/jasmine/4.0.0/jasmine.css">
 </head>
 <body>
   <h1>Tip Pool</h1>
@@ -79,14 +80,22 @@
   </section>
 <!-- uncoment the following to run Jasmine tests -->
 
-<script 
+<!-- <script 
   src="https://unpkg.com/jasmine-core/lib/jasmine-core/jasmine.js"></script>
 <script 
   src="https://unpkg.com/jasmine-core/lib/jasmine-core/jasmine-html.js"></script>
 <script 
-  src= "https://unpkg.com/jasmine-core/lib/jasmine-core/boot.js"></script>
+  src= "https://unpkg.com/jasmine-core/lib/jasmine-core/boot.js"></script> -->
 
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jasmine/4.0.0/jasmine.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jasmine/4.0.0/jasmine-html.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jasmine/4.0.0/boot0.js"></script>  
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jasmine/4.0.0/boot1.js"></script>
+  
+
+<!-- <script src="payments.test.js"></script>  -->
 <script src="servers.test.js"></script> 
+<!-- <script src="helpers.test.js"></script> -->
 
 <!-- end of Jasmine tests -->
 

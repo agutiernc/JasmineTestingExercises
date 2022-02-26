@@ -64,6 +64,15 @@ describe('helpers tests', function () {
     expect(newTr.firstChild.textContent).toEqual('test')
   })
 
+  it('should create a delete btn and append to table', function() {
+    let newTr = document.createElement('tr')
+
+    appendDeleteBtn(newTr)
+
+    expect(newTr.children.length).toEqual(1)
+    expect(newTr.firstChild.textContent).toEqual('X')
+  })
+
   afterEach(function() {
     billAmtInput.value = ''
     tipAmtInput.value = ''
